@@ -6,8 +6,6 @@ print(infile)
 print(outfile)
 print()
 
-
-
 for line in infile:
     try:
         murder = line.split(",")[9]
