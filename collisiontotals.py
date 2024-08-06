@@ -19,7 +19,7 @@ infile.close()
 
 print(monthcountdict)
 
-for month in monthcountdict.keys():
-    print(f"{month}, {monthcountdict[month]}", file=outfile)
+# for month in monthcountdict.keys():
+#     print(f"{month}, {monthcountdict[month]}", file=outfile)
 
 outfile.close()
