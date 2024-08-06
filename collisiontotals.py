@@ -1,5 +1,5 @@
 infile = open("csv/CollisionsByMonth.csv")
-# outfile = open("csv/collisionmonthlytotals.csv", "w")
+outfile = open("csv/collisionmonthlytotals.csv", "w")
 
 monthcountdict = {
     "01": 0,
@@ -19,7 +19,7 @@ infile.close()
 
 print(monthcountdict)
 
-# for month in monthcountdict.keys():
-#     print(f"{month}, {monthcountdict[month]}", file=outfile)
+for month in monthcountdict.keys():
+    print(f"{month}, {monthcountdict[month]}", file=outfile)
 
-# outfile.close()
+outfile.close()
