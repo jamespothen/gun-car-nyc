@@ -14,12 +14,13 @@ monthcountdict = {
 for line in infile:
     month = line.split(",")[0][0:2]
     numpeoplekilled = int(line.split(",")[1])
+    print(numpeoplekilled)
     monthcountdict[month] += numpeoplekilled
 infile.close()
 
 print(monthcountdict)
 
-# for month in monthcountdict.keys():
-#     print(f"{month}, {monthcountdict[month]}", file=outfile)
+for month in monthcountdict.keys():
+    print(f"{month}, {monthcountdict[month]}", file=outfile)
 
 outfile.close()
