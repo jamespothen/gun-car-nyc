@@ -1,6 +1,6 @@
 infile = open("csv/ShootingsByMonth.csv")
-# outfile = open("shootingmonthlytotals.csv", "w")
-#
+outfile = open("csv/shootingmonthlytotals.csv", "w")
+
 monthcountdict = {
     "01": 0,
     "02": 0,
@@ -14,12 +14,9 @@ monthcountdict = {
 for line in infile:
     month = line[0:2]
     monthcountdict[month] += 1
-    # print(monthcountdict[month])
-    # print(f"{year}: {monthcountdict[month]}")
 infile.close()
-print(monthcountdict)
-#
-# for year in yearcountdict.keys():
-#     print(f"{year}, {yearcountdict[year]}", file=outfile)
-#
-# outfile.close()
+
+for month in monthcountdict.keys():
+    print(f"{month}, {monthcountdict[month]}", file=outfile)
+
+outfile.close()
